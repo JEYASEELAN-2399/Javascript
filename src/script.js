@@ -32,3 +32,27 @@ console.log(typeof(carmodel))
 
 
 //we can redeclare variables in another diff block but in same block it is not allowed
+
+
+// ******* hoisting ****** 
+
+
+// with var we can iniliase the variable before it is declared eg 
+
+{
+carname = 'volvo'
+
+var carname;
+
+
+console.log(carname)
+}
+
+// but hoisting is not applicable to let and const
+{
+
+try{carname = "bmw";
+let carname;}
+catch(err){
+console.log(err);
+}}
