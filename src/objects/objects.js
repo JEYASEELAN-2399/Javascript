@@ -39,3 +39,23 @@ console.log(myobj.action());
 document.getElementById("app").innerHTML=myobj.action();
 
 // this refers to an object
+
+
+ const person = (name , age , networth) => {
+
+  const myobj = {
+    name:name,
+    age:age,
+    networth:networth,  
+    liabilities:50,
+    assests: function(){
+      return this.networth-this.liabilities
+    }
+  }
+const introducer = `my name is ${name},and age is ${age},and my networth is ${myobj.assests()} usd`
+console.log(introducer)
+document.getElementById("sample").innerHTML=introducer;
+}
+
+person("jeyaseelan",25,100)
+
